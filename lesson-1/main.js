@@ -2,7 +2,11 @@ const user = {     // 4567
     name: 'Bob',
     age: 26,
     isMarried: true,
-    friends: ['Alex', 'Bob', 'John']
+    friends: ['Alex', 'Bob', 'John'],
+    address: {
+        city: 'Bobruisk',
+        street: 'Lenina'
+    }
 }
 // const arr = [1, 2, 3, 4]
 //
@@ -40,6 +44,21 @@ copyUser.isStudent = true
 console.log(user)
 
 // const deepCopy={...user,friends:[...user.friends]}
-const deepCopy = structuredClone(user)
+// const deepCopy = structuredClone(user)
+// console.log(deepCopy === user)
+// console.log(deepCopy.friends === user.friends)
+const deepCopy = {...user, friends: [...user.friends], address: {...user.address}}
 console.log(deepCopy === user)
 console.log(deepCopy.friends === user.friends)
+console.log(deepCopy.address === user.address)
+
+const student = [
+    {name: 'Bob'},
+    {name: 'Alex'},
+    {name: 'Ann'}
+]
+
+const copyStudent = [...student]
+console.log(copyStudent === student)
+
+const deepCopyStudent = []
