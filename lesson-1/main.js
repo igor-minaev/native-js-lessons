@@ -52,13 +52,21 @@ console.log(deepCopy === user)
 console.log(deepCopy.friends === user.friends)
 console.log(deepCopy.address === user.address)
 
-const student = [
+const students = [
     {name: 'Bob'},
     {name: 'Alex'},
     {name: 'Ann'}
 ]
 
-const copyStudent = [...student]
-console.log(copyStudent === student)
+const copyStudents = [...students]
+console.log(copyStudents === students)
 
-const deepCopyStudent = []
+// const deepCopyStudents = []
+// for (let i = 0; i < students.length; i++) {
+//     deepCopyStudents[i]={...students}
+// }
+
+const deepCopyStudents= students.map(t=>({...t}))
+console.log(deepCopyStudents===students)
+console.log(deepCopyStudents[0]===students[0])
+console.log(deepCopyStudents[0].name===students[0].name)
