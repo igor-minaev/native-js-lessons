@@ -37,3 +37,17 @@ const getNames = (arr) => {
     return result
 }
 console.log(getNames(students))
+
+const addScores = (arr) => {
+    const result = []
+    const func = st => ({...st, scores: st.scores + 10})
+    for (let i = 0; i < arr.length; i++) {
+        const newValue = func(arr[i])
+        result.push(newValue)
+    }
+    return result
+}
+
+console.log(addScores(students))
+
+
