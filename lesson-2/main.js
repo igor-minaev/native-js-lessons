@@ -72,7 +72,23 @@ const getMappedArray = (arr, func) => {
     return result
 }
 
-console.log(getMappedArray(students,st => st.name))
+console.log(getMappedArray(students, st => st.name))
+console.log(getMappedArray(students, st => ({...st, scores: st.scores + 10})))
 
+console.log(students.map(st => st.name))
 
+console.log(students.filter(st => st.scores >= 100))
+
+const myFilter = (arr, func) => {
+    const result = []
+    for (let i = 0; i < arr.length; i++) {
+        const newValue = func(arr[i])
+        if (newValue === true) {
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+
+console.log(myFilter(students,st => st.scores >= 100))
 
