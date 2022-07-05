@@ -51,3 +51,26 @@ const addScores = (arr) => {
 console.log(addScores(students))
 
 
+const addPopIsStudent = (arr) => {
+    const result = []
+    const func = st => ({...st, isStudent: true})
+    for (let i = 0; i < arr.length; i++) {
+        const newValue = func(arr[i])
+        result.push(newValue)
+    }
+    return result
+}
+
+console.log(addPopIsStudent(students))
+
+const getMappedArray = (arr, func) => {
+    const result = []
+    for (let i = 0; i < arr.length; i++) {
+        const newValue = func(arr[i])
+        result.push(newValue)
+    }
+    return result
+}
+
+
+
