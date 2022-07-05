@@ -89,6 +89,18 @@ const myFilter = (arr, func) => {
     }
     return result
 }
+const callBack = st => st.scores >= 100
+console.log(myFilter(students,callBack))
 
-console.log(myFilter(students,st => st.scores >= 100))
+const myFind=(arr,func)=>{
+    for (let i = 0; i < arr.length; i++) {
+        const newValue = func(arr[i])
+        if (newValue === true) {
+            return arr[i]
+        }
+    }
+}
+
+console.log(students.find(st=>st.name === 'Alex'))
+console.log(myFind(students,st=>st.name === 'Alex'))
 
