@@ -72,5 +72,7 @@ const getMappedArray = (arr, func) => {
     return result
 }
 
+console.log(getMappedArray(students,st => st.name))
+
 
 
