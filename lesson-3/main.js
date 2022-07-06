@@ -6,10 +6,16 @@
 const sm = document.getElementById('small')
 const md = document.getElementById('medium')
 const bg = document.getElementById('big')
+const a = document.getElementById('a')
 
 function onCllickHandlerSm(e) {
     e.stopPropagation()  //прекратить распространение
     alert('yo')
+}
+
+function anchorHandler(e){
+    e.preventDefault() // отмена поведения по умолчанию
+    alert('смерть ссылкам')
 }
 
 // sm.onclick = onCllickHandler  // старый метод
@@ -24,3 +30,4 @@ md.addEventListener('click', (e) => {
     }
 )
 bg.addEventListener('click', (e) => console.log('yo'))
+a.addEventListener('click', anchorHandler)
