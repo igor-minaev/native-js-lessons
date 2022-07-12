@@ -27,3 +27,5 @@ const tasks = {
         {id: 24, title: 'Ice-cream', isDone: false}
     ]
 }
+
+console.log(tasks[todoListID_1][0].title)  // 'JS'
