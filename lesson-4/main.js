@@ -29,3 +29,41 @@ const tasks = {
 }
 
 console.log(tasks[todoListID_1][0].title)  // 'JS'
+
+
+// reduce
+
+const nums = [10, 30, 20]
+console.log(nums.reduce((acc, el) => {
+    acc = acc + el
+    return acc
+}, 0))
+
+console.log(nums.reduce((acc, el) => acc > el ? acc : el))
+
+const students = [
+    {
+        name: "Bob",
+        age: 22,
+        isMarried: true,
+        scores: 85,
+    },
+    {
+        name: "Alex",
+        age: 21,
+        isMarried: true,
+        scores: 89
+    },
+    {
+        name: "Nick",
+        age: 20,
+        isMarried: false,
+        scores: 120
+    },
+    {
+        name: "John",
+        age: 19,
+        isMarried: false,
+        scores: 100
+    }
+];
