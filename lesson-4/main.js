@@ -67,3 +67,11 @@ const students = [
         scores: 100
     }
 ];
+
+console.log(students.reduce((acc, el) => acc.scores > el.scores ? acc : el))
+console.log(students.reduce((acc, el) => acc + el.scores, 0))
+/*console.log(students.map(st=>({...st,scores:st.scores + 10})))*/
+console.log(students.reduce((acc, el) => {
+    acc.push({...el, scores: el.scores + 10})
+    return acc
+}, []))
